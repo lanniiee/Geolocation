@@ -7,7 +7,12 @@ function App() {
   const [latitude, setLatitude] = useState(0);
   const [longitude, setLongitude] = useState(0);
 
-  const getLocation = () => {
+  const showPosition = (position) => {
+      setLatitude(position.coords.latitude)
+      setLongitude(position.coords.longitude)
+  }
+
+  const getLocation = async () => {
       if (navigator.geolocation) {
           navigator.geolocation.watchPosition(showPosition);
       } else {
@@ -15,15 +20,9 @@ function App() {
       }
   }
 
-  const showPosition = (position) => {
-      setLatitude(position.coords.latitude)
-      setLongitude(position.coords.longitude)
-  }
-
   useEffect(() => {
-      getLocation()
-  }, [getLocation()])
-
+    getLocation()
+  }, [latitude, longitude])
 
   return (
     <div className="App">

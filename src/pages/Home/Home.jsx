@@ -5,7 +5,11 @@ const Home = ({longitude, latitude}) => {
 
     return (
         <div className="home">
-            <Weather longitude={longitude} latitude={latitude}/>
+            <h1>Hello User</h1>
+            {(latitude !== 0) ?
+                (<Weather longitude={longitude} latitude={latitude}/>)
+                : <div className="home__loading">Loading...</div>
+            }
         </div>
     )
 
