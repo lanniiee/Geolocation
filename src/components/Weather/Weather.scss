@@ -1,0 +1,17 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.weather {
+    border-radius: 2rem 2rem 0 0;
+    width: 80vw;
+    height: 10rem;
+    background: rgb(8,8,8);
+    background: linear-gradient(-15deg, rgba(8,8,8,1) 0%, rgba(8,8,8,1) 53%, rgba(29,29,29,1) 67%, rgba(62,62,62,1) 85%, rgba(109,109,109,1) 99%, rgba(149,149,149,1) 100%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem;
+    margin: 1rem 0;
+}

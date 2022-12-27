@@ -1,0 +1,13 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.home {
+    background-color: $color-background;
+    color: $color-secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 100vw;
+    min-height: 100vh;
+    padding: 2rem 2rem;
+}
