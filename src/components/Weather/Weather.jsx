@@ -17,9 +17,9 @@ const Weather = ({longitude, latitude}) => {
 
     useEffect(() => {
         getLocationDetails()
-    }, [])
+    }, [longitude, latitude])
 
-    console.log(details.current)
+    console.log(details)
 
     return (
         <div>
