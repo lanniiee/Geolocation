@@ -24,9 +24,20 @@ function App() {
     getLocation()
   }, [latitude, longitude])
 
+  const currentHour = new Date().getHours();
+  let greeting = "Good Morning"
+
+  if (currentHour >= 12) {
+    greeting = "Good Afternoon"
+  }
+
+  if (currentHour >=18) {
+    greeting = "Good Evening"
+  }
+
   return (
     <div className="App">
-      <Home longitude={longitude} latitude={latitude}/>
+      <Home longitude={longitude} latitude={latitude} greeting={greeting}/>
     </div>
   );
 }
