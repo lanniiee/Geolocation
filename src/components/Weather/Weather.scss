@@ -3,15 +3,48 @@
 
 .weather {
     border-radius: 2rem 2rem 0 0;
-    width: 80vw;
     height: 10rem;
     background: rgb(8,8,8);
-    background: linear-gradient(-15deg, rgba(8,8,8,1) 0%, rgba(8,8,8,1) 53%, rgba(29,29,29,1) 67%, rgba(62,62,62,1) 85%, rgba(109,109,109,1) 99%, rgba(149,149,149,1) 100%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(-25deg, rgba(8,8,8,1) 0%, rgba(8,8,8,1) 60%, rgba(29,29,29,1) 80%, rgba(62,62,62,1) 95%, rgba(109,109,109,1) 99%, rgba(149,149,149,1) 100%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%);
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 2rem;
+    padding: 1rem 1rem;
     margin: 1rem 0;
+    &__heading {
+        font-family: $font-Raleway;
+        font-size: 1.7rem;
+    }
+    .weather-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__mainInfo, &__moreInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 1rem;
+        }
+        &__mainInfo {
+            &--icon {
+                width: 5rem;
+                height: 5rem;
+            }
+            &--condition {
+                color: rgba(210, 210, 210, 0.606);
+                font-family: $font-roboto;
+                font-weight: 500;
+                font-size: 1.1rem;
+            }
+        }
+        &__moreInfo {
+            &--temp {
+                font-family: $font-roboto;
+                font-size: 1.2rem;
+            }
+        }
+    }
 }

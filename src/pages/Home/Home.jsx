@@ -10,6 +10,7 @@ const Home = ({latitude, greeting, weather, dailyForecast}) => {
                 (<>
                     <h1 className="home__greeting">{greeting} {weather.location.name}!</h1>
                     <Weather weather={weather} />
+                    <h1 className="home__heading">Daily Forecast</h1>
                     {dailyForecast}
                 </>)
                 : (

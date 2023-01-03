@@ -18,8 +18,8 @@ const Forecast = ({weather}) => {
                 <p className="forecast__date--day">{date}</p>
             </div>
             <img className="forecast__image" src={day.condition.icon} alt="icon" />
-            <p className="forecast__max">Max: {day.maxtemp_c}°C</p>
-            <p className="forecast__min">Min: {day.mintemp_c}°C</p>
+            <p className="forecast__temp">Max: {day.maxtemp_c}°C</p>
+            <p className="forecast__temp">Min: {day.mintemp_c}°C</p>
         </div>
     )
 }
