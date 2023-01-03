@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Geolocation/static/css/main.205af5f6.css",
+    "main.js": "/Geolocation/static/js/main.61b16ccd.js",
+    "static/js/787.0992c180.chunk.js": "/Geolocation/static/js/787.0992c180.chunk.js",
+    "index.html": "/Geolocation/index.html",
+    "main.205af5f6.css.map": "/Geolocation/static/css/main.205af5f6.css.map",
+    "main.61b16ccd.js.map": "/Geolocation/static/js/main.61b16ccd.js.map",
+    "787.0992c180.chunk.js.map": "/Geolocation/static/js/787.0992c180.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.205af5f6.css",
+    "static/js/main.61b16ccd.js"
+  ]
+}
