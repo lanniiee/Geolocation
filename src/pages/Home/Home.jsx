@@ -1,8 +1,7 @@
 import "./Home.scss";
 import Weather from "../../components/Weather/Weather";
-import Forecast from "../../components/Forecast/Forecast";
 
-const Home = ({latitude, greeting, weather, dailyForecast}) => {
+const Home = ({latitude, greeting, weather, dailyForecast, hourForecast}) => {
 
     return (
         <div className="home">
@@ -10,6 +9,10 @@ const Home = ({latitude, greeting, weather, dailyForecast}) => {
                 (<>
                     <h1 className="home__greeting">{greeting} {weather.location.name}!</h1>
                     <Weather weather={weather} />
+                    <h1 className="home__heading">Hours Forecast</h1>
+                    <div className="home__hourForecast">
+                        {hourForecast}
+                    </div>
                     <h1 className="home__heading">Daily Forecast</h1>
                     {dailyForecast}
                 </>)

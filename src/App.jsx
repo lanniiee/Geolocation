@@ -3,6 +3,7 @@ import Home from './pages/Home/Home';
 import { useEffect, useState } from "react";
 import apikeys from "./data/api/api.js";
 import Forecast from './components/Forecast/Forecast';
+import HourForecast from './components/HourForecast/HourForecast';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
   const [longitude, setLongitude] = useState(0);
   const [weather, setWeather] = useState({});
   const [dailyForecast, setDailyForecast] = useState([]);
+  const [hourForecast, setHourForecast] = useState()
 
   const showPosition = (position) => {
       setLatitude(position.coords.latitude)
@@ -29,7 +31,7 @@ function App() {
   }, [latitude, longitude])
 
   const getLocationWeather = async () => {
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${apikeys.key}&q=${latitude},${longitude}&days=${10}&aqi=no&alerts=no`
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${apikeys.key}&q=${latitude},${longitude}&days=${10}&aqi=no&alerts=no`
     const res = await fetch(url);
     const data = await res.json();
     setWeather(data)
@@ -40,11 +42,25 @@ function App() {
       )
     })
     setDailyForecast(daily)
+
+    let hourly = [];
+
+    for (let i = 0; i < data.forecast.forecastday[0].hour.length; i+=3) {
+      hourly.push(data.forecast.forecastday[0].hour[i])
+    }
+
+    const hourForecastContainer = hourly.map((hours, i) => {
+      return (
+        <HourForecast key={i} hours={hours}/>
+      )
+    })
+    setHourForecast(hourForecastContainer)
 }
 
 useEffect(() => {
     getLocationWeather()
 }, [latitude, longitude])
+
 
   const currentHour = new Date().getHours();
   let greeting = "Good Morning"
@@ -59,7 +75,13 @@ useEffect(() => {
 
   return (
     <div className="App">
-      <Home longitude={longitude} latitude={latitude} greeting={greeting} weather={weather} dailyForecast={dailyForecast}/>
+      <Home 
+        longitude={longitude} 
+        latitude={latitude} 
+        greeting={greeting} 
+        weather={weather} 
+        dailyForecast={dailyForecast} 
+        hourForecast={hourForecast} />
     </div>
   );
 }

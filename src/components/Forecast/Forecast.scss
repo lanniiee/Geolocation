@@ -5,15 +5,17 @@
     width: 90vw;
     height: 4rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.221);
+    border: 1px solid $color-dark-gray;
     border-radius: 1rem;
     margin: 0.5rem 0;
-    &__image {
-        width: 2.5rem;
-        height: 2.5rem;
+    &__imageContainer {
+        &--icon {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
     }
     &__date {
         &--day {
@@ -22,6 +24,10 @@
         }
     }
     &__temp {
+        font-size: 0.9rem;
+        font-family: $font-roboto;
+    }
+    &__text {
         font-size: 0.9rem;
         font-family: $font-roboto;
     }

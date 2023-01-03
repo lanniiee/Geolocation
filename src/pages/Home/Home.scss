@@ -19,5 +19,13 @@
         font-family: $font-Raleway;
         font-size: 1.5rem;
         font-weight: 400;
+        margin: 2rem 0 0 0;
+    }
+    &__hourForecast {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        flex-wrap: wrap;
     }
 }

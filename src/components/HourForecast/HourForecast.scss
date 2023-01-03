@@ -1,0 +1,31 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.hourForecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 10rem;
+    justify-content: space-between;
+    border: 1px solid $color-dark-gray;
+    border-radius: 1rem;
+    padding: 0.7rem 0.2rem;
+    margin: 0.3rem;
+    width: 4.5rem;
+    &__time {
+        font-size: 0.8rem;
+        font-family: $font-roboto;
+    }
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    &__temp {
+        font-size: 0.9rem;
+        font-family: $font-roboto;
+    }
+    &__text {
+        font-size: 0.7rem;
+        font-family: $font-roboto;
+    }
+}
