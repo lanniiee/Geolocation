@@ -8,17 +8,7 @@ const Weather = ({weather}) => {
         forecast
     } = weather;
 
-    console.log(weather)
 
-    const time = [
-        '0',
-        '4',
-        '8',
-        '12',
-        '16',
-        '20'
-    ]
-    
     return (
         <div className="weather">
             <div className="weather__mainInfo">
