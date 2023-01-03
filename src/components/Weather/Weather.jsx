@@ -11,7 +11,7 @@ const Weather = ({weather}) => {
 
     return (
         <div className="weather">
-                <h1 className="weather__heading">Today</h1>
+                <h1 className="weather__heading">{location.name}</h1>
                 <div className="weather-container">
                     <div className="weather-container__mainInfo">
                         <img className="weather-container__mainInfo--icon" src={current.condition.icon} alt="icon" />

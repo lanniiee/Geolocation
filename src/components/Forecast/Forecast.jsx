@@ -11,8 +11,6 @@ const Forecast = ({weather}) => {
     const options = {weekday: "long"}
     const dayOfTheWeek = new Intl.DateTimeFormat("en-UK", options).format(newDate)
 
-    console.log(weather)
-
     return (
         <div className="forecast">
             <div className="forecast__date">

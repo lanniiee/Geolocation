@@ -12,6 +12,7 @@ function App() {
   const [weather, setWeather] = useState({});
   const [dailyForecast, setDailyForecast] = useState([]);
   const [hourForecast, setHourForecast] = useState()
+  const [isLoading, setIsLoading] = useState(true);
 
   const showPosition = (position) => {
       setLatitude(position.coords.latitude)
@@ -35,6 +36,10 @@ function App() {
     const res = await fetch(url);
     const data = await res.json();
     setWeather(data)
+    setIsLoading(false)
+
+    console.log(weather)
+
 
     const daily = data.forecast.forecastday.map((day) => {
       return (
@@ -55,6 +60,7 @@ function App() {
       )
     })
     setHourForecast(hourForecastContainer)
+
 }
 
 useEffect(() => {
@@ -76,8 +82,8 @@ useEffect(() => {
   return (
     <div className="App">
       <Home 
-        longitude={longitude} 
-        latitude={latitude} 
+        latitude={latitude}
+        isLoading={isLoading}
         greeting={greeting} 
         weather={weather} 
         dailyForecast={dailyForecast} 
