@@ -38,9 +38,6 @@ function App() {
     setWeather(data)
     setIsLoading(false)
 
-    console.log(weather)
-
-
     const daily = data.forecast.forecastday.map((day) => {
       return (
         <Forecast key={day.date} weather={day}/>

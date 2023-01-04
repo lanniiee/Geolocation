@@ -9,6 +9,12 @@
     align-items: flex-start;
     min-height: 100vh;
     padding: 2rem 2rem;
+    &__dashboard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+    }
     &__greeting{
         font-family: $font-Raleway;
         font-size: 2rem;

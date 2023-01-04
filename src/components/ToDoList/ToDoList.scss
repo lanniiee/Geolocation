@@ -1,0 +1,48 @@
+@use "../../styles/variables.scss" as *;
+@use "../../styles/typography.scss" as *;
+
+.toDoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 10rem;
+    text-align: start;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    .toDoList-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0.1rem;
+        margin: 0 0.4rem;
+        &__heading {
+            font-family: $font-roboto;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        &__lists {
+            display: flex;
+            flex-direction: column;
+            &--list {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                font-family: $font-roboto;
+                border: 1px solid $color-dark-gray;
+                font-size: 0.8rem;
+                border-radius: 3px;
+                width: 28vw;
+                padding: 0.2rem;
+                margin: 0.2rem 0;
+            }
+            &--remove {
+                padding: 0.1rem 0.3rem;
+                font-size: 0.8rem;
+                border: none;
+                background-color: transparent;
+                color: $color-gray;
+                text-align: center;
+            }
+        }
+    }
+}
